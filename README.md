@@ -4,43 +4,40 @@ este programa extrae el contenido de un xml y lo convierte a un csv para luego p
 
 el esquema actual que tiene que tener el xml es el siguiente
 
-`
-
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Agenda>
-	<Evento-Principal>
-		<Evento-Principal-Titulo></Evento-Principal-Titulo>
-		<Evento-Principal-Dia-inicio></Evento-Principal-Dia-inicio>
-		<Evento-Principal-Dia-fin></Evento-Principal-Dia-fin>
-		<Evento-Principal-Hora></Evento-Principal-Hora>
-		<Evento-Principal-Lugar></Evento-Principal-Lugar>
-		<Evento-Principal-Descripcion></Evento-Principal-Descripcion>
-		<Evento-Principal-info-extra></Evento-Principal-info-extra>
-		<Evento-Principal-Programa>
-			<Sub-evento>
-				<Sub-evento-Dia></Sub-evento-Dia>
-				<Sub-evento-Titulo></Sub-evento-Titulo>
-				<Sub-evento-Hora></Sub-evento-Hora>
-				<Sub-evento-descripcion></Sub-evento-descripcion>
-				<Sub-evento-info-extra></Sub-evento-info-extra>
-				<Sub-evento-lugar></Sub-evento-lugar>
-				<Sub-evento-actividades>
-					<actividad>
-						<actividad-hora></actividad-hora>
-						<actividad-titulo></actividad-titulo>
-						<actividad-lugar></actividad-lugar>
-						<actividad-descipcion></actividad-descipcion>
-						<actividad-info-extra></actividad-info-extra>
-					</actividad>
-				</Sub-evento-actividades>
-			</Sub-evento>
-		</Evento-Principal-Programa>
-		<Evento-comarca></Evento-comarca>
-		<Evento-tipo></Evento-tipo>
-		<Evento-categoria></Evento-categoria>
-	</Evento-Principal>
-</Agenda>
-`'''`
+`    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <Agenda>
+        <Evento-Principal>
+            <Evento-Principal-Titulo></Evento-Principal-Titulo>
+            <Evento-Principal-Dia-inicio></Evento-Principal-Dia-inicio>
+            <Evento-Principal-Dia-fin></Evento-Principal-Dia-fin>
+            <Evento-Principal-Hora></Evento-Principal-Hora>
+            <Evento-Principal-Lugar></Evento-Principal-Lugar>
+            <Evento-Principal-Descripcion></Evento-Principal-Descripcion>
+            <Evento-Principal-info-extra></Evento-Principal-info-extra>
+            <Evento-Principal-Programa>
+                <Sub-evento>
+                    <Sub-evento-Dia></Sub-evento-Dia>
+                    <Sub-evento-Titulo></Sub-evento-Titulo>
+                    <Sub-evento-Hora></Sub-evento-Hora>
+                    <Sub-evento-descripcion></Sub-evento-descripcion>
+                    <Sub-evento-info-extra></Sub-evento-info-extra>
+                    <Sub-evento-lugar></Sub-evento-lugar>
+                    <Sub-evento-actividades>
+                        <actividad>
+                            <actividad-hora></actividad-hora>
+                            <actividad-titulo></actividad-titulo>
+                            <actividad-lugar></actividad-lugar>
+                            <actividad-descipcion></actividad-descipcion>
+                            <actividad-info-extra></actividad-info-extra>
+                        </actividad>
+                    </Sub-evento-actividades>
+                </Sub-evento>
+            </Evento-Principal-Programa>
+            <Evento-comarca></Evento-comarca>
+            <Evento-tipo></Evento-tipo>
+            <Evento-categoria></Evento-categoria>
+        </Evento-Principal>
+    </Agenda>`
 
 Los campos del post en Wordpress para su importación son los siguiente
 
