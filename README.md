@@ -4,7 +4,8 @@ este programa extrae el contenido de un xml y lo convierte a un csv para luego p
 
 el esquema actual que tiene que tener el xml es el siguiente
 
-`    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+```XML
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <Agenda>
         <Evento-Principal>
             <Evento-Principal-Titulo></Evento-Principal-Titulo>
@@ -37,7 +38,8 @@ el esquema actual que tiene que tener el xml es el siguiente
             <Evento-tipo></Evento-tipo>
             <Evento-categoria></Evento-categoria>
         </Evento-Principal>
-    </Agenda>`
+    </Agenda>
+```
 
 Los campos del post en Wordpress para su importación son los siguiente
 
