@@ -1,0 +1,5 @@
+Por ahora funciona correctamente
+
+Cosas a realizar ahora.
+- Si el xml tiene varios eventos principales, separarlo automáticamente en filas separadas como si fueran archivos xml distintos
+- 

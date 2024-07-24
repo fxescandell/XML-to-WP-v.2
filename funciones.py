@@ -20,13 +20,14 @@ def process_files(file_paths, csv_path):
         for file_path in file_paths:
             tree = ET.parse(file_path)
             root = tree.getroot()
-            csv_data = parse_xml(root)
-            writer.writerow(csv_data)
+            events = root.findall("Evento-Principal")
+            for event in events:
+                csv_data = parse_xml(event)
+                writer.writerow(csv_data)
 
-def parse_xml(root):
+def parse_xml(evento_principal):
     csv_data = {}
 
-    evento_principal = root.find("Evento-Principal")
     csv_data["post_title"] = get_text(evento_principal, "Evento-Principal-Titulo")
     csv_data["post_content"] = get_text(evento_principal, "Evento-Principal-Descripcion")
     csv_data["post_excerpt"] = get_text(evento_principal, "Evento-Principal-Descripcion-corta")
@@ -118,16 +119,6 @@ def convert_to_timestamp(date_str):
     return str(int(date.timestamp()))
 
 def generate_event_config(start_date, end_date):
-    config = {
-        "date": start_date,
-        "is_end_date": "1",
-        "end_date": end_date,
-        "is_recurring": "1",
-        "recurring": "daily",
-        "recurring_period": "1",
-        "end": "on_date",
-        "end_after_date": end_date
-    }
     return '{"date":"%s","is_end_date":"1","end_date":"%s","is_recurring":"1","recurring":"daily","recurring_period":"1","end":"on_date","end_after_date":"%s"}' % (
         start_date, end_date, end_date
     )
